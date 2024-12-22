@@ -236,7 +236,7 @@ export const logoutApi = () =>
     body: JSON.stringify({
       token: localStorage.getItem('refreshToken')
     })
-  }).then((res) => {
+  }).then(() => {
     setCookie('accessToken', '');
-    return res;
+    return;
   });

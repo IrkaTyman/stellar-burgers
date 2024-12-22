@@ -5,11 +5,11 @@ import { TTabMode } from '@utils-types';
 
 import { BurgerIngredientsUI } from '../ui/burger-ingredients';
 import { useSelector } from '../../services/store';
-import { getIngredientsState } from '../../services/slices/Ingredients';
+import { getIngredientsState } from '../../services/slices/ingredients';
 import { Preloader } from '../ui/preloader';
 
 export const BurgerIngredients: FC = () => {
-  const { ingredients, loading, error } = useSelector(getIngredientsState);
+  const { ingredients, isLoading, error } = useSelector(getIngredientsState);
   const buns = ingredients.filter((ingredient) => ingredient.type === 'bun');
   const mains = ingredients.filter((ingredient) => ingredient.type === 'main');
   const sauces = ingredients.filter(
@@ -57,7 +57,7 @@ export const BurgerIngredients: FC = () => {
     return <p>Упс... что-то пошло не так...</p>;
   }
 
-  if (loading) {
+  if (isLoading) {
     return <Preloader />;
   }
 

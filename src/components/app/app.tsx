@@ -16,7 +16,7 @@ import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { ProtectedRoute } from '../protected-route';
 import { useDispatch } from '../../services/store';
 import { useEffect } from 'react';
-import { getIngredientsList } from '../../services/slices/Ingredients';
+import { getIngredientsList } from '../../services/slices/ingredients';
 import { apiGetUser } from '../../services/slices/user';
 
 const App = () => {

@@ -6,7 +6,7 @@ import { TIngredient } from '@utils-types';
 import { OrderCardProps } from './type';
 import { OrderCardUI } from '../ui/order-card';
 import { useSelector } from '../../services/store';
-import { getIngredients } from '../../services/slices/Ingredients';
+import { getIngredients } from '../../services/slices/ingredients';
 
 const maxIngredients = 6;
 export const OrderCard: FC<OrderCardProps> = memo(({ order }) => {
